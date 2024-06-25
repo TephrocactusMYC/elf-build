@@ -18,8 +18,8 @@
 		maj_ver = <0x1>;
 		min_ver = <0x1>;
 		exec_state = <0x0>;
-		load_address = <0x0 0xe100000>;
-		entrypoint = <0x0 0xe100000>;
+		load_address = <0x0 0x48100000>;
+		entrypoint = <0x0 0x48100000>;
 		binary_size = <0x80000>;
 	};
 
@@ -27,7 +27,7 @@
 		compatible = "hafnium,hafnium";
 		vm1 {
 			is_ffa_partition;
-			load_address = <0xe300000>;
+			load_address = <0x48300000>;
 			debug_name = "op-tee";
 			vcpu_count = <4>;
 			mem_size = <0xd00000>;
@@ -62,12 +62,12 @@
 	/* VIRT_SECURE_MEM */
 	memory@0 {
 		device_type = "memory";
-		reg = <0x0 0xe000000 0x1000000>;
+		reg = <0x0 0x4000000 0x8000000>;
 	};
 
 	/* NS memory */
 	memory@1 {
 		device_type = "ns-memory";
-		reg = <0x0 0x40000000 0x80000000>;
+		reg = <0x0 0x48000000 0x80000000>;
 	};
 };

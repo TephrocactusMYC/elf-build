@@ -82,10 +82,10 @@ SCMI_DTB 		?= $(BINARIES_PATH)/qemu-v8-scmi.dtb
 
 # Load and entry addresses (u-boot only)
 # If you change this please also change in kconfigs/u-boot_qemu_v8.conf
-KERNEL_ENTRY		?= 0x42200000
-KERNEL_LOADADDR		?= 0x42200000
-ROOTFS_ENTRY		?= 0x45000000
-ROOTFS_LOADADDR		?= 0x45000000
+KERNEL_ENTRY		?= 0x4A200000
+KERNEL_LOADADDR		?= 0x4A200000
+ROOTFS_ENTRY		?= 0x4D000000
+ROOTFS_LOADADDR		?= 0x4D000000
 
 ifeq ($(SPMC_AT_EL),2)
 BL32_DEPS		?= hafnium optee-os
